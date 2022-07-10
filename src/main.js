@@ -2,13 +2,12 @@ import Vue from 'vue'
 console.log(Vue.use);
 import App from './App.vue'
 import router from '@/router' // 路由对象
-import request from '@/utils/request' // 请求模块
 import "@/styles/index.less"
+import store from "@/store/index"
+
 
 //引入字体图标
 import "@/assets/iconfont/iconfont.css"
-
-// import router from './router/index'
 //引入vant组件库
 import Vant from 'vant';
 import 'vant/lib/index.css';
@@ -20,7 +19,7 @@ Vue.use(Vant);
 Vue.config.productionTip = false
 
 new Vue({
-  router,
+  store,
   render: h => h(App),
-
+   router,
 }).$mount('#app')
